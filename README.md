@@ -1,22 +1,31 @@
 # Real-time-process-monitoring-dashboard
 Project Title: Real Time Process Monitoring Dashboard
 
-Authors:
+## Authors:
 
 Shiwani Bhagat, Barnali Das, Satendra Yadav
 
-Overview:
+## Overview
 
-This project is a real-time system monitoring dashboard built using Dash and Plotly. It provides live updates on CPU usage, memory usage, disk usage, and running processes on your system.
+This project is a real-time system monitoring dashboard built using Dash and Plotly. It helps track system performance by visualizing key metrics like CPU usage, memory usage, disk space, and running processes. The dashboard updates automatically every 2 seconds to provide live insights.
 
-Features : 
+## Features
+1. **CPU Usage** : 
+* Displays a real-time graph of CPU utilization over time.
 
-Live CPU Usage Graph: Displays real-time CPU usage.
+* Helps in monitoring system performance and detecting high CPU usage.
 
-Memory Usage Graph: Shows used and available memory.
+2.**Memory Usage** : 
+* Shows a pie chart representing used and available memory.
 
-Disk Usage Graph: Visualizes disk space consumption.
+* Useful for tracking how much RAM is currently occupied.
 
-Running Processes Table: Lists active processes with CPU and memory usage.
+3.**Disk Usage** : 
+* Visualizes storage utilization in a simple, easy-to-understand format.
 
-Auto Refresh: Updates data every 2 seconds.
+* Displays the percentage of disk space used vs. available.
+
+4.**Running Processes Table** : 
+* Lists the top 10 processes consuming the most CPU power.
+
+* Shows details like Process ID (PID), Name, CPU %, and Memory %.
