@@ -29,3 +29,25 @@ This project is a real-time system monitoring dashboard built using Dash and Plo
 * Lists the top 10 processes consuming the most CPU power.
 
 * Shows details like Process ID (PID), Name, CPU %, and Memory %.
+
+## Technologies Used
+* **Dash** (for building the web-based dashboard)
+
+* **Plotly** (for visualizing system data)
+
+* **Psutil** (for fetching real-time system performance data)
+
+* **Pandas** (for processing and structuring data)
+
+ ## How to Run the Dashboard
+1**Install dependencies:**
+
+* pip install dash psutil pandas plotly
+  
+**Run the application:**
+
+* python app.py
+
+**Open in browser:**
+
+* http://127.0.0.1:8060
