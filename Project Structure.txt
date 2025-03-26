@@ -1,5 +1,5 @@
 Real-Time-Monitoring-Dashboard/
-│── app.py                 # Main application file (Dashboard logic & callbacks)
+│── app.ipynb                 # Main application file (Dashboard logic & callbacks)
 │── requirements.txt        # List of dependencies for installation
 │── README.md               # Project documentation
 │
