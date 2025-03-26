@@ -151,6 +151,17 @@ Process ID (PID)
         for proc in psutil.process_iter(attrs=['pid', 'name', 'cpu_percent', 'memory_percent']):
             processes.append(proc.info)
         return df.to_dict('records')  # Updates process table dynamically
+        
+## Snapshots Of The Dashboard
+
+![newplot (4)](https://github.com/user-attachments/assets/25e7fc93-99eb-4d89-8d72-20fed69e17de)
+![newplot (5)](https://github.com/user-attachments/assets/ad2c0ea7-c3ca-4e22-bf9a-349b1299b1ce)
+![newplot (6)](https://github.com/user-attachments/assets/54bb96a6-9b91-4d29-a295-7e6eae237716)
+![newplot (7)](https://github.com/user-attachments/assets/c7c313ce-69a8-4459-992d-0ebfe8904435)
+![Screenshot (122)](https://github.com/user-attachments/assets/b76fbdb0-518a-4613-8b2d-be120f5b3ad6)
+
+
+
 
  ## License
 
