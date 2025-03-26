@@ -51,3 +51,111 @@ This project is a real-time system monitoring dashboard built using Dash and Plo
 **Open in browser:**
 
 * http://127.0.0.1:8060
+
+
+## Module-Wise Breakdown
+**1. Dashboard Layout (UI Module)**
+* File: app.py
+ * Libraries Used: dash, dash_table, html, dcc
+* Functionality:
+
+The main structure of the dashboard is built using Dash components.
+
+The interface consists of graphs, tables, and auto-refresh intervals.
+
+**Components included:**
+
+* CPU Usage Graph (Line Chart)
+
+* Memory Usage Pie Chart
+
+* Disk Usage Pie Chart
+
+Top Running Processes Table
+
+**2. CPU Monitoring Module**
+* Library Used: psutil, plotly.graph_objs
+  **Functionality:**
+
+Tracks CPU utilization in real time.
+
+Maintains a history of CPU usage for the last 20 updates.
+
+Displays data in a line graph for trend analysis.
+
+**Key Function:**
+'''python
+
+    def update_cpu_graph(n):
+        cpu_percent = psutil.cpu_percent(interval=None)
+        return figure  # Updates the graph dynamically
+    
+**3. Memory Monitoring Module**
+Library Used: psutil, plotly.graph_objs
+**Functionality:**
+
+* Fetches current memory usage from psutil.virtual_memory().
+
+* Visualizes memory as a pie chart (Used vs Available).
+
+* Helps monitor RAM consumption.
+
+**Key Function:**
+
+'''python
+
+    def update_memory_graph(n):
+         mem = psutil.virtual_memory()
+         return figure  # Displays memory usage as a pie chart
+    
+**4. Disk Usage Monitoring Module**
+Library Used: psutil, plotly.graph_objs
+**Functionality:**
+
+* Tracks the disk space usage in real time.
+
+* Shows used vs free space in a pie chart.
+
+**Key Function:**
+
+'''python
+
+    def update_disk_graph(n):
+        disk = psutil.disk_usage('/')
+        return figure  # Updates the disk usage pie chart
+    
+**5. Process Monitoring Module**
+Library Used: psutil, pandas, dash_table
+Functionality:
+
+* Fetches all running processes and sorts them by CPU usage.
+
+* Displays the top 10 CPU-consuming processes in a table.
+
+**Information displayed:**
+
+Process ID (PID)
+
+* Process Name
+
+* CPU Usage %
+
+*mMemory Usage %
+
+**Key Function:**
+
+'''python
+
+    def update_process_table(n):
+        processes = []
+        for proc in psutil.process_iter(attrs=['pid', 'name', 'cpu_percent', 'memory_percent']):
+            processes.append(proc.info)
+        return df.to_dict('records')  # Updates process table dynamically
+
+ ## License
+
+This project is open-source and available under the MIT License.
+
+## Contributions
+
+Contributions are welcome! Feel free to fork this repository and submit a pull request.
