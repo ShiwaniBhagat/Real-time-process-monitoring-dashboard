@@ -1,5 +1,5 @@
 This project collects real-time system performance data, so it doesn't require a static data file. However, if you want to test the dashboard without live monitoring, you can use a sample CSV file.
-The sample file contains:
+The sample file contains: 
 
 CPU Usage (%) – Simulated CPU usage over time.
 
